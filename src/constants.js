@@ -55,6 +55,7 @@ export const modes = {
 };
 
 export const events = {
+  POLY: 'draw.poly',
   CREATE: 'draw.create',
   DELETE: 'draw.delete',
   UPDATE: 'draw.update',

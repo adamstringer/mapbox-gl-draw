@@ -18,8 +18,8 @@ export default [
     'type': 'fill',
     'filter': ['all', ['==', 'active', 'true'], ['==', '$type', 'Polygon']],
     'paint': {
-      'fill-color': '#fbb03b',
-      'fill-outline-color': '#fbb03b',
+      'fill-color': '#ff6d04',
+      'fill-outline-color': '#ff6d04',
       'fill-opacity': 0.1
     }
   },
@@ -31,7 +31,7 @@ export default [
       ['==', 'meta', 'midpoint']],
     'paint': {
       'circle-radius': 3,
-      'circle-color': '#fbb03b'
+      'circle-color': '#ff6d04'
     }
   },
   {
@@ -48,7 +48,7 @@ export default [
     },
     'paint': {
       'line-color': '#3bb2d0',
-      'line-width': 2
+      'line-width': 3
     }
   },
   {
@@ -60,9 +60,9 @@ export default [
       'line-join': 'round'
     },
     'paint': {
-      'line-color': '#fbb03b',
+      'line-color': '#ff6d04',
       'line-dasharray': [0.2, 2],
-      'line-width': 2
+      'line-width': 3
     }
   },
   {
@@ -79,7 +79,7 @@ export default [
     },
     'paint': {
       'line-color': '#3bb2d0',
-      'line-width': 2
+      'line-width': 3
     }
   },
   {
@@ -94,9 +94,9 @@ export default [
       'line-join': 'round'
     },
     'paint': {
-      'line-color': '#fbb03b',
+      'line-color': '#ff6d04',
       'line-dasharray': [0.2, 2],
-      'line-width': 2
+      'line-width': 3
     }
   },
   {
@@ -122,7 +122,7 @@ export default [
     ],
     'paint': {
       'circle-radius': 3,
-      'circle-color': '#fbb03b'
+      'circle-color': '#ff6d04'
     }
   },
   {
@@ -176,7 +176,7 @@ export default [
       ['==', 'active', 'true']],
     'paint': {
       'circle-radius': 5,
-      'circle-color': '#fbb03b'
+      'circle-color': '#ff6d04'
     }
   },
   {
@@ -199,7 +199,7 @@ export default [
     },
     'paint': {
       'line-color': '#404040',
-      'line-width': 2
+      'line-width': 3
     }
   },
   {
@@ -212,7 +212,7 @@ export default [
     },
     'paint': {
       'line-color': '#404040',
-      'line-width': 2
+      'line-width': 3
     }
   },
   {

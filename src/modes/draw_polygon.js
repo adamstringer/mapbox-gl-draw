@@ -6,6 +6,8 @@ import createVertex from '../lib/create_vertex';
 
 const DrawPolygon = {};
 
+console.log("init2");
+
 DrawPolygon.onSetup = function() {
   const polygon = this.newFeature({
     type: Constants.geojsonTypes.FEATURE,
@@ -17,7 +19,8 @@ DrawPolygon.onSetup = function() {
   });
 
   this.addFeature(polygon);
-
+  //this._ctx.ui.queueMapClasses({ mouse: Constants.cursors.ADD });
+  //console.log(this._ctx.ui);
   this.clearSelectedFeatures();
   doubleClickZoom.disable(this);
   this.updateUIClasses({ mouse: Constants.cursors.ADD });
@@ -47,7 +50,8 @@ DrawPolygon.clickOnVertex = function(state) {
 };
 
 DrawPolygon.onMouseMove = function(state, e) {
-  state.polygon.updateCoordinate(`0.${state.currentVertexPosition}`, e.lngLat.lng, e.lngLat.lat);
+  //this._ctx.ui.queueMapClasses({ mouse: Constants.cursors.ADD });
+  //state.polygon.updateCoordinate(`0.${state.currentVertexPosition}`, e.lngLat.lng, e.lngLat.lat);
   if (CommonSelectors.isVertex(e)) {
     this.updateUIClasses({ mouse: Constants.cursors.POINTER });
   }
@@ -102,6 +106,9 @@ DrawPolygon.toDisplayFeatures = function(state, geojson, display) {
   if (coordinateCount < 3) {
     return;
   }
+  this.map.fire(Constants.events.POLY, {
+    coordinateCount
+  });
   geojson.properties.meta = Constants.meta.FEATURE;
   display(createVertex(state.polygon.id, geojson.geometry.coordinates[0][0], '0.0', false));
   if (coordinateCount > 3) {
